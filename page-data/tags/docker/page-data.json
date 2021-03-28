@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/docker/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/blog/2016/sitecore-in-docker/"},"frontmatter":{"title":"Running Sitecore in Docker","date":"2016-10-29"}}}]}},"pageContext":{"tag":"docker"}},"staticQueryHashes":["2841359383"]}
