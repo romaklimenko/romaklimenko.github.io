@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+body {
+  font-family: "Ubuntu";
+  font-size: 15px;
+}
+
+header a, header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  margin: 10px 0 10px 0;
+}
+
+header span {
+  border-radius: .3rem;
+  padding: 5px;
+  margin: 1px;
+  font-size: larger;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+.jumbotron a {
+  color: white;
+  text-decoration: none;
+}
+
+.post p, .gatsby-highlight {
+  max-width: 780px;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+code {
+  font-size: 14px !important;
+}
+
+dd {
+  margin-bottom: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* body {
+    background-color: #fdf6e3;
+  } */
+  body, .card, .table, .form-control, .form-control:focus, .nav-link.active {
+    background-color: #0d1117 !important;
+    color: #c9d1d9;
+  }
+  
+  a {
+    color: rgb(78, 148, 206);
+  }
+  
+  .hl-black {
+    color: white !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #c9d1d9;
+  }
+
+  img, pre, code {
+    opacity: .8;
+  }
+
+  img {
+    background-color: white;
+  }
+}
