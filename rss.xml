@@ -1,4 +1,133 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Roman Klimenko]]></title><description><![CDATA[Roman Klimenko's home page]]></description><link>https://romaklimenko.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Mar 2021 13:37:54 GMT</lastBuildDate><item><title><![CDATA[Hasta la vista, Sitecore!]]></title><description><![CDATA[After eleven years in Sitecore, it's time to move on and say hasta la vista. During the last weeks, I was deeply moved to receive dozens of…]]></description><link>https://romaklimenko.github.io/blog/2021/hasta-la-vista/</link><guid isPermaLink="false">https://romaklimenko.github.io/blog/2021/hasta-la-vista/</guid><pubDate>Fri, 26 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After eleven years in Sitecore, it&apos;s time to move on and say &lt;a href=&quot;/2015/02/05/skynet.html&quot;&gt;hasta la vista&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Roman Klimenko]]></title><description><![CDATA[Roman Klimenko's home page]]></description><link>https://romaklimenko.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 18 Apr 2021 14:54:09 GMT</lastBuildDate><item><title><![CDATA[How to list Azure resource locations]]></title><description><![CDATA[If you want to create a new resource group from Azure CLI. You can easily do it like that: But what if you would like to create a resource…]]></description><link>https://romaklimenko.github.io/blog/2021/list-locations/</link><guid isPermaLink="false">https://romaklimenko.github.io/blog/2021/list-locations/</guid><pubDate>Sun, 18 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;azure.png&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;small&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/global-infrastructure/geographies/&quot; target=&quot;_blank&quot;&gt;
+    https://azure.microsoft.com/en-us/global-infrastructure/geographies/&lt;/a&gt;&lt;/small&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;p&gt;If you want to &lt;a href=&quot;https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_create&quot;&gt;create a new resource group&lt;/a&gt; from Azure CLI. You can easily do it like that:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;az group create --location westus -name MyResourceGroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But what if you would like to create a resource group in Europe or Asia? What should you type instead of &lt;code class=&quot;language-text&quot;&gt;westus&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;To have a complete list of available locations, you can run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;az account list-locations&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You will get a long output like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;displayName&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Brazil Southeast&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/subscriptions/.../locations/brazilsoutheast&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;metadata&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;geographyGroup&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;South America&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;latitude&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-22.90278&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;longitude&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-43.2075&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;pairedRegion&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/subscriptions/.../locations/brazilsouth&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;brazilsouth&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token property&quot;&gt;&quot;subscriptionId&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token null keyword&quot;&gt;null&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;physicalLocation&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Rio&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;regionCategory&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Other&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;regionType&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Physical&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;brazilsoutheast&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;regionalDisplayName&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;(South America) Brazil Southeast&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;subscriptionId&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token null keyword&quot;&gt;null&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This list is hard to read and what you need from it is the &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt; property of each location.
+To get only names, use the &lt;code class=&quot;language-text&quot;&gt;--query&lt;/code&gt; parameter:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;az account list-locations --query &lt;span class=&quot;token string&quot;&gt;&quot;[*].name&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The output is way readable now:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;eastus&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;eastus2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;southcentralus&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;westus2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;australiaeast&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;norwaywest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;switzerlandwest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;ukwest&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;uaecentral&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;brazilsoutheast&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But still, it would be nice to sort the list alphabetically:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;az account list-locations --query &lt;span class=&quot;token string&quot;&gt;&quot;[*].name&quot;&lt;/span&gt; --out tsv &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;asia
+asiapacific
+australia
+australiacentral
+australiacentral2
+australiaeast
+australiasoutheast
+brazil
+brazilsouth
+brazilsoutheast
+canada
+canadacentral
+canadaeast
+centralindia
+centralus
+centraluseuap
+centralusstage
+eastasia
+eastasiastage
+eastus
+eastus2
+eastus2euap
+eastus2stage
+eastusstage
+europe
+francecentral
+francesouth
+germanynorth
+germanywestcentral
+global
+india
+japan
+japaneast
+japanwest
+jioindiawest
+koreacentral
+koreasouth
+northcentralus
+northcentralusstage
+northeurope
+norwayeast
+norwaywest
+southafricanorth
+southafricawest
+southcentralus
+southcentralusstage
+southeastasia
+southeastasiastage
+southindia
+switzerlandnorth
+switzerlandwest
+uaecentral
+uaenorth
+uk
+uksouth
+ukwest
+unitedstates
+westcentralus
+westeurope
+westindia
+westus
+westus2
+westus2stage
+westus3
+westusstage&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you are in PowerShell, you could filter the output like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;powershell&quot;&gt;&lt;pre class=&quot;language-powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;az account list&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;locations &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;query &lt;span class=&quot;token string&quot;&gt;&quot;[*].name&quot;&lt;/span&gt; `
+    &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ConvertFrom-Json&lt;/span&gt; `
+    &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt; `
+    &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt; where &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$_&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-like&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;*europe*&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;europe
+northeurope
+westeurope&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hasta la vista, Sitecore!]]></title><description><![CDATA[After eleven years in Sitecore, it's time to move on and say hasta la vista. During the last weeks, I was deeply moved to receive dozens of…]]></description><link>https://romaklimenko.github.io/blog/2021/hasta-la-vista/</link><guid isPermaLink="false">https://romaklimenko.github.io/blog/2021/hasta-la-vista/</guid><pubDate>Fri, 26 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After eleven years in Sitecore, it&apos;s time to move on and say &lt;a href=&quot;/2015/02/05/skynet.html&quot;&gt;hasta la vista&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;During the last weeks, I was deeply moved to receive dozens of warm wishes from my colleagues. A few days ago, I received an electronic postcard with best wishes from more than fifty sitecorians with whom I had the pleasure to work on various projects.&lt;/p&gt;
 &lt;p&gt;My &lt;a href=&quot;https://doc.sitecore.com/users/exm/100/email-experience-manager/en/introducing-the-email-experience-manager.html&quot;&gt;lovely team&lt;/a&gt; presented me with a lot of cute things that I will keep to remember the time we have spent together. This funny mousepad is among these things:&lt;/p&gt;
 &lt;img src=&quot;fine.jpeg&quot; class=&quot;img-fluid&quot; /&gt;
