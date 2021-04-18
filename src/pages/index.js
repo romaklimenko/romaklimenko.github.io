@@ -63,10 +63,10 @@ const BlogIndex = ({ data, location }) => {
         <div className="col-md-4">
           <h3>About</h3>
           <p>
-            I am a professional software developer. I have been in IT for more
+            I am a professional software developer who have been in IT for more
             than two decades and spent more than eleven years in{" "}
             <Link to="/blog/2020/sitecorosaur/">Sitecore</Link>. From March
-            2021, I am happy to be a senior implementation engineer in{" "}
+            2021, I am happy to be a Senior Implementation Engineer in{" "}
             <a href="https://www.cluedin.com/" target="_blank" rel="noreferrer">
               CluedIn
             </a>
@@ -387,7 +387,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 50
+      limit: 10
     ) {
       nodes {
         excerpt

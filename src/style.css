@@ -66,9 +66,9 @@ h6 {
   max-width: 780px;
 }
 
-.gatsby-resp-image-wrapper {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+.post p {
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 code {
