@@ -1,7 +1,7 @@
 ---
-title: "How to list Azure resource locations"
+title: "List Azure resource locations"
 date: "2021-04-18"
-tags: ["how-to", "cloud", "az-cli", "az-account"]
+tags: ["how-to", "cloud", "azure", "az-cli", "az-group", "az-account"]
 ---
 
 <img src="azure.png" class="img-fluid" />

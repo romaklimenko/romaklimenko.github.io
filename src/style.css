@@ -103,8 +103,4 @@ dd {
   img, pre, code {
     opacity: .8;
   }
-
-  img {
-    background-color: white;
-  }
 }

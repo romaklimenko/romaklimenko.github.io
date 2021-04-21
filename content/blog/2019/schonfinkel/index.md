@@ -1,7 +1,7 @@
 ---
 title: "Moses Ilyich Schönfinkel"
 date: "2019-02-23"
-tags: ["notes", "fact-checking"]
+tags: ["fact-checking"]
 ---
 
 <img src="Moses-Schonfinkel.png" class="img-fluid" />
