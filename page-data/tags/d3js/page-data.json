@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/d3js/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/blog/2021/right-to-left-d3-tree/"},"frontmatter":{"title":"Render a right-to-left tree with D3.js","date":"2021-04-30"}}}]}},"pageContext":{"tag":"d3js"}},"staticQueryHashes":["2841359383"]}
