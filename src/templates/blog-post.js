@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   const disqusConfig = {
-    shortname: "romaklimenko",
+    shortname: "r10o",
     config: { identifier: data.markdownRemark.fields.slug },
   }
 
