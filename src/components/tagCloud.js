@@ -19,12 +19,10 @@ export default function TagCloud() {
         const minFontSize = 100;
         const maxFontSize = 150;
 
-        const count = data.allMarkdownRemark.group
-          .map(d => d.totalCount)
-          .reduce((a, b) => a + b, 0);
-
         return data.allMarkdownRemark.group.map(d => {
-          const fontSize = d.totalCount === 1 ? 95 : Math.floor(d.totalCount / biggestTagCount * (maxFontSize - minFontSize)) + minFontSize;
+          const fontSize = d.totalCount === 1 ?
+            95 :
+            Math.floor(d.totalCount / biggestTagCount * (maxFontSize - minFontSize)) + minFontSize;
           return (
             <span key={d.fieldValue}>
               <Link
