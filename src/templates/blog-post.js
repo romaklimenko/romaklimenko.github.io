@@ -3,11 +3,17 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { DiscussionEmbed } from "disqus-react"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+
+  const disqusConfig = {
+    shortname: "romaklimenko",
+    config: { identifier: data.markdownRemark.fields.slug },
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -60,6 +66,9 @@ const BlogPostTemplate = ({ data, location }) => {
             </ul>
           </nav>
         </div>
+        <div className="col-md-10">
+          <DiscussionEmbed {...disqusConfig} />
+        </div>
       </div>
     </Layout>
   )
@@ -82,6 +91,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
