@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/python/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/blog/2021/reddit-praw/"},"frontmatter":{"title":"PRAW, The Python Reddit API Wrapper","date":"2021-05-02"}}}]}},"pageContext":{"tag":"python"}},"staticQueryHashes":["2841359383"]}
