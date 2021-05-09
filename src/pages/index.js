@@ -14,25 +14,25 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Home" />
       <div className="row">
         <div className="col-md-4">
-          <div className="jumbotron" style={{ backgroundColor: "#26a29a" }}>
-            <a href="/tags/cluedin">
+          <a href="/tags/cluedin" class="a-jumbotron">
+            <div className="jumbotron" style={{ backgroundColor: "#26a29a" }}>
               <h2>CluedIn</h2>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <div className="col-md-4">
-          <div className="jumbotron" style={{ backgroundColor: "#FF6D00" }}>
-            <a href="/tags/dataisbeautiful">
+          <a href="/tags/dataisbeautiful" class="a-jumbotron">
+            <div className="jumbotron" style={{ backgroundColor: "#FF6D00" }}>
               <h2>Data</h2>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <div className="col-md-4">
-          <div className="jumbotron" style={{ backgroundColor: "#0277BD" }}>
-            <a href="/tags/cloud">
+          <a href="/tags/cloud" class="a-jumbotron">
+            <div className="jumbotron" style={{ backgroundColor: "#0277BD" }}>
               <h2>Cloud</h2>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="row">
@@ -63,7 +63,7 @@ const BlogIndex = ({ data, location }) => {
         <div className="col-md-4">
           <h3>About</h3>
           <p>
-            I am a professional software developer who have been in IT for more
+            I am a professional software developer who has been in IT for more
             than two decades and spent more than eleven years in{" "}
             <Link to="/blog/2020/sitecorosaur/">Sitecore</Link>. From March
             2021, I am happy to be a Senior Implementation Engineer in{" "}

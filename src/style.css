@@ -57,9 +57,13 @@ h6 {
   font-size: 0.8em;
 }
 
-.jumbotron a {
+a .jumbotron {
   color: white;
   text-decoration: none;
+}
+
+a.a-jumbotron:hover {
+  color: white;
 }
 
 .post p, .gatsby-highlight {
@@ -78,11 +82,8 @@ code {
 dd {
   margin-bottom: 0px;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
-  /* body {
-    background-color: #fdf6e3;
-  } */
   body, .card, .table, .form-control, .form-control:focus, .nav-link.active {
     background-color: #0d1117 !important;
     color: #c9d1d9;
@@ -103,4 +104,4 @@ dd {
   img, pre, code {
     opacity: .8;
   }
-}
+} */
