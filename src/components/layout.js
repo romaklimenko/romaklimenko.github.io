@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { withAITracking } from "@microsoft/applicationinsights-react-js";
+import { reactPlugin } from "../utils/AppInsights";
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -35,4 +37,4 @@ const Layout = ({ location, title, children }) => {
   )
 }
 
-export default Layout
+export default process.env.NODE_ENV === 'development' ? Layout : withAITracking(reactPlugin, Layout);

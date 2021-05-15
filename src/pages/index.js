@@ -14,21 +14,21 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="Home" />
       <div className="row">
         <div className="col-md-4">
-          <a href="/tags/cluedin" class="a-jumbotron">
+          <a href="/tags/cluedin" className="a-jumbotron">
             <div className="jumbotron" style={{ backgroundColor: "#26a29a" }}>
               <h2>CluedIn</h2>
             </div>
           </a>
         </div>
         <div className="col-md-4">
-          <a href="/tags/dataisbeautiful" class="a-jumbotron">
+          <a href="/tags/dataisbeautiful" className="a-jumbotron">
             <div className="jumbotron" style={{ backgroundColor: "#FF6D00" }}>
               <h2>Data</h2>
             </div>
           </a>
         </div>
         <div className="col-md-4">
-          <a href="/tags/cloud" class="a-jumbotron">
+          <a href="/tags/cloud" className="a-jumbotron">
             <div className="jumbotron" style={{ backgroundColor: "#0277BD" }}>
               <h2>Cloud</h2>
             </div>
