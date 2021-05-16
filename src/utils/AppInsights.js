@@ -14,7 +14,12 @@ const appInsights = new ApplicationInsights({
 })
 
 const filterURLs = envelope => {
-  if (envelope.baseData.name.endsWith("app-data.json") || envelope.baseData.name.endsWith("page-data.json")) {
+  if (process.env.NODE_ENV === "development") {
+    return false;
+  }
+
+  if (!!envelope.baseData.name
+    && (envelope.baseData.name.endsWith("app-data.json") || envelope.baseData.name.endsWith("page-data.json"))) {
     return false;
   }
 

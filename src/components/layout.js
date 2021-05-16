@@ -37,4 +37,4 @@ const Layout = ({ location, title, children }) => {
   )
 }
 
-export default process.env.NODE_ENV === 'development' ? Layout : withAITracking(reactPlugin, Layout);
+export default withAITracking(reactPlugin, Layout);
